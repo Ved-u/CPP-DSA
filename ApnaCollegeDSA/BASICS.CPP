@@ -8,7 +8,6 @@ int main() {
    int age = 69;
    bool isAdult = (age>=18)? true : false;
    
-
    // calculator
     int a,b;
     char op;
