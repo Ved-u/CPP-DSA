@@ -27,7 +27,6 @@ int sumOddDigits(int n)
 void loops()
 {
     //for loop 
-
     for(int i=1;i<=10;i++)
     {
         cout<<i<<" ";
@@ -75,6 +74,5 @@ bool isPrime(int n)
 int main()
 {
     cout<<isPrime(11)<<endl;
-    
     return 0;
 }
