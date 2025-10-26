@@ -27,19 +27,28 @@ int sumOddDigits(int n)
 void loops()
 {
     //for loop 
-    for(int i=1;i<=100;i++)
+
+    for(int i=1;i<=10;i++)
     {
         cout<<i<<" ";
     }
+
     //while
     cout<<endl;
     int i=1;
-    while(i<=100)
+    while(i<=10)
     {
         cout<<i++<<" ";
     }
     cout<<endl;
+
     // do-while
+    /* program asking user to enter a positive number repeatedly untill he does so */
+    do
+    {
+        /* code */
+        cin>>i;
+    } while (i%10!=0);
 }
 
 int revNum(int n)
@@ -53,9 +62,19 @@ int revNum(int n)
    return rev;
 }
 
+bool isPrime(int n)
+{
+    for(int i=2;i<n;i++)
+    {
+        if(n%i==0)
+            return false;
+    }
+    return true;
+}
+
 int main()
 {
-    cout<<revNum(12345)<<endl;
+    cout<<isPrime(11)<<endl;
     
     return 0;
 }
