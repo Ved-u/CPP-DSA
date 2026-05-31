@@ -1,4 +1,5 @@
 #include <iostream>
+#include <cmath>
 using namespace std;
 
 int sumDigits(int n)
@@ -71,8 +72,31 @@ bool isPrime(int n)
     return true;
 }
 
+int binToDec(int n){
+    int ans=0;
+    int power=0;
+    while(n>0){
+        ans+=(n%10==1)?pow(2,power):0;
+        n/=10;
+        power++;
+    }
+    return ans;
+}
+
+int decToBin(int n){
+    int ans=0;
+    int power = 1;
+    while(n > 0){
+        int rem = n % 2;
+        ans += rem * power;
+        power *= 10;
+        n /= 2;
+    }
+    return ans;
+}
+
 int main()
 {
-    cout<<isPrime(11)<<endl;
+    cout<<decToBin(10)<<endl;
     return 0;
 }
